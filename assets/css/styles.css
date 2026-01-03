@@ -109,13 +109,83 @@ img {
 }
 
 /*=============== SIDEBAR ===============*/
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: -120%;
+	bottom: 0;
+	width: 232px;
+	background-color: hsla(0, 0%, 0%, .2);
+	backdrop-filter: blur(16px);
+	z-index: 100;
+	padding: 1rem 1rem 1.5rem;
+	margin: 1rem;
+	border-radius: 1rem;
+	transition: left .4s;
+}
 
+.sidebar__logo {
+	display: flex;
+	align-items: center;
+	column-gap: .75rem;
+	color: var(--white-color);
+	padding: 0 0 1rem .5rem;
+	font-weight: 500;
+	border-bottom: 1px solid hsla(0, 0%, 100%, .3);
+}
+
+.sidebar__logo i {
+	font-size: 1.5rem;
+}
+
+.sidebar__content {
+	display: grid;
+	row-gap: .5rem;
+	padding-top: 1.5rem;
+}
+
+.sidebar__link {
+	display: flex;
+	align-items: center;
+	column-gap: .75rem;
+	color: var(--white-color);
+	padding: .5rem;
+	border-radius: .5rem;
+	transition: background-color .4s;
+}
+
+.sidebar__link i {
+	font-size: 1.25rem;
+}
+
+.sidebar__link span {
+	font-weight: 500;
+}
+
+.sidebar__link:hover {
+	background-color: hsla(0, 0%, 0%, .2);
+}
 
 /* Show sidebar */
-
+.show-sidebar {
+	left: 0;
+}
 
 /*=============== DROPDOWN ===============*/
+.drop__button {
+	width: 100%;
+	flex-direction: row;
+	border: none;
+	outline: none;
+	background: none;
+	font: 500 var(--normal-font-size) var(--body-font);
+	cursor: pointer;
+}
 
+.drop__arrow {
+	margin-left: auto;
+	transition: transform .4s;
+}
 
 /* Rotate drop icon */
 
