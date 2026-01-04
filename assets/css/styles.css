@@ -187,8 +187,44 @@ img {
 	transition: transform .4s;
 }
 
-/* Rotate drop icon */
+.drop__list {
+	display: grid;
+	row-gap: .25rem;
+	height: 0;
+	overflow: hidden;
+	transition: height .4s;
+}
 
+.drop__item {
+	position: relative;
+	display: block;
+	color: var(--white-color);
+	padding: .5rem .5rem .5rem 2.25rem;
+	border-radius: .5rem;
+	transition: background-color .4s;
+}
+
+.drop__item::after {
+	content: '';
+	width: 6px;
+	height: 6px;
+	background-color: var(--white-color);
+	position: absolute;
+	left: 1rem;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	border-radius: 50%;
+}
+
+.drop__item:hover {
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+/* Rotate drop icon */
+.show-drop .drop__arrow {
+	transform: rotate(-180deg);
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
